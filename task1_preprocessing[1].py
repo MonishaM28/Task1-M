@@ -8,7 +8,7 @@ import seaborn as sns
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 # 1. Load Dataset
-df = pd.read_csv("titanic.csv")  # Place Titanic dataset in same folder
+df = pd.read_csv(r"C:\Users\monisha\Downloads\Titanic-Dataset.csv")  # Place Titanic dataset in same folder
 print("Shape:", df.shape)
 print(df.info())
 print(df.isnull().sum())
@@ -47,8 +47,8 @@ for col in ['Age', 'Fare']:
 scaler = StandardScaler()
 df[['Age', 'Fare']] = scaler.fit_transform(df[['Age', 'Fare']])
 
-print("✅ Preprocessing Completed!")
+print("Preprocessing Completed!")
 print(df.head())
 
 # Save cleaned dataset
-df.to_csv("titanic_cleaned.csv", index=False)
+df.to_csv("Titanic-Dataset_cleaned.csv", index=False)
